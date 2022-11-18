@@ -38,7 +38,7 @@ function type_assertions() {
     const car = {} as Car;
     car.make = 'Toyota';
 
-    // Type assertions must always specify a more or less specific type
+    // Type assertions must always specify a more specific type
     // This is why you will see assertions specifying the unkownn type before 
     // asserting a new type
     // let x = car as unknown as Dog;
