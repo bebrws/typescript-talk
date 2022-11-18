@@ -221,7 +221,8 @@ function mapped_types() {
 
 
 class Animal {
-    constructor(name) {
+    name: string;
+    constructor(name: string) {
         this.name = name;
     }
 
@@ -231,7 +232,7 @@ class Animal {
 }
 
 class Dog extends Animal {
-    constructor(name) {
+    constructor(name: string) {
         super(name); // call the super class constructor and pass in the name parameter
     }
 
