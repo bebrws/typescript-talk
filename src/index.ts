@@ -82,8 +82,9 @@ function minimal_types() {
     const input: unknown = JSON.parse(`{ "breed": "Terrier"}`);
     // In situations like this you would normally use something like a Type Guard
     // to verify the type and then assert it
-    // Here I verify this is not a primitive and use "in" as a Type Guard to 
+    // Here I verify this is not a primitive and use "in" as a Type Guard to
     // verify that the input Object has the breed property
+    // Knowing this, in this case, I feel confident in asserting the type as Dog
     if (input instanceof Object && "breed" in input) {
         const dog = input as Dog;
     }
@@ -145,6 +146,7 @@ function optional_chaining() {
 }
 
 function null_and_undefined() {
+    // count will be initialized to undefined as we don't set an inital value
     let count: number | null | undefined;
 
     console.log(count);
